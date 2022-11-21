@@ -1,7 +1,7 @@
 import {
   getAppElement
 } from "@/helpers/app";
-import './index.css'
+import './index.css';
 
 export const getLogo = () => {
   return document.querySelector('.logo');
@@ -24,8 +24,6 @@ export const renderLogo = () => {
           </clipPath>
           </defs>
         </svg>
-
-      
       </div>
     </div>
   `;

@@ -1,7 +1,7 @@
 import { SiteContent } from "../types/site-content"
 
 export const siteInitialContent = ():SiteContent => ({
-  content: `Je m'appelle <strong>Enguerran</strong>, je suis <strong>développeur web front-end</strong>, et je travaille actuellement pour <a href="#">beta.gouv.fr</a> au sein de l'équipe <a href="https://immersion-facile.beta.gouv.fr/" target="_blank">Immersion Facilitée</a>. <small>#React #TypeScript #Redux #Sass #Jest #a11y</small>`,
+  content: `Je m'appelle <strong>Enguerran</strong>, je suis <strong>développeur web front-end</strong>, et je travaille actuellement pour <a href="#">beta.gouv.fr</a> au sein de l'équipe <a href="https://immersion-facile.beta.gouv.fr/" target="_blank">Immersion Facilitée</a>. <small>#React #TypeScript #Redux #CSS #HTML #a11y</small>`,
   links: [
     {
       type: 'github',
