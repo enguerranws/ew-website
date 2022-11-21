@@ -1,0 +1,22 @@
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  min-height: 90vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Monosten", Courier, monospace;
+  line-height: 1.4;
+  text-align: center;
+  padding-top: 2rem;
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    border: 10px solid var(--background-border-color);
+  }
+}

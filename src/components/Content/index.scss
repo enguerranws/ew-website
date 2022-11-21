@@ -1,0 +1,27 @@
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  padding: 0 1rem;
+  text-transform: lowercase;
+  font-size: 1rem;
+  strong {
+    font-weight: bold;
+  }
+  a {
+    color: var(--primary-tint);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted var(--primary-tint);
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+  small {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--secondary-tint);
+  }
+}

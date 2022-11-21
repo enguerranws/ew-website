@@ -1,0 +1,55 @@
+.logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+  min-height: 18rem;
+  --width: 220px;
+  --height: var(--width);
+  --diameter: calc(var(--width) - 1.5rem);
+}
+
+.logo__circle {
+  width: var(--diameter);
+  height: var(--diameter);
+  border-radius: 50%;
+  background-color: #08AEEA;
+  background-image: linear-gradient(
+  120deg,
+  #ad45cb,
+  #1976e9,
+  #29c08e,
+  #065ec9,
+  #ad45cb,
+  #da464f,
+    #eaca15
+);
+  background-size: 100vw;
+  
+  animation: Gradient 20s ease infinite;
+}
+.logo__image {
+  position: absolute;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logo__image svg {
+  width: var(--width);
+  height: var(--height);
+  filter: drop-shadow(0 4px 5px rgb(0 0 0 / .35));
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
