@@ -1,0 +1,27 @@
+name: Build and Publish EW Portfolio - master
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+      - name: Build Project
+        run: |
+          npm install
+          npm run-script build
+      - name: List output files
+        run: cd dist && ls
+      - name: FTP-Deploy
+        uses: SamKirkland/FTP-Deploy-Action@master
+        with:
+          server: ftp.ew-staging.com
+          username: ${{ secrets.FTP_USER_DEV }}
+          password: ${{ secrets.FTP_PASSWORD_DEV }}
+          local-dir: dist/
+          server-dir: enguerranweiss.fr/
