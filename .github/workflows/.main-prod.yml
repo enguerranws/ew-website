@@ -6,15 +6,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v4
         with:
-          node-version: "16.x"
+          node-version: "22.x"
+          cache: pnpm
       - name: Build Project
         run: |
-          npm install
-          npm run-script build
+          pnpm install --frozen-lockfile
+          pnpm run build
       - name: List output files
         run: cd dist && ls
       - name: FTP-Deploy
