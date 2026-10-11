@@ -1,7 +1,7 @@
 import {
   getAppElement
 } from "@/helpers/app";
-import {
+import type {
   Links
 } from "@/types/links";
 import './index.scss'
